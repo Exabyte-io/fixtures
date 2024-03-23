@@ -1,3 +1,2 @@
-data/applications filter=lfs diff=lfs merge=lfs -text
-data/db filter=lfs diff=lfs merge=lfs -text
-data/formats filter=lfs diff=lfs merge=lfs -text
+data/** filter=lfs diff=lfs merge=lfs -text
+data/**/*.yml  !filter !diff !merge text
