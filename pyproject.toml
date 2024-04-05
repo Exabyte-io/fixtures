@@ -16,7 +16,7 @@ classifiers = [
 ]
 dependencies = [
     # add requirements here
-    "numpy"
+    "pyyaml",
 ]
 
 [project.optional-dependencies]
@@ -27,7 +27,9 @@ tests = [
     "ruff",
     "isort",
     "mypy",
-    "pip-tools"
+    "pip-tools",
+    "pytest",
+    "types-PyYAML",
 ]
 all = ["mat3ra-fixtures[tests]"]
 
@@ -48,6 +50,12 @@ git_describe_command = "git describe --tags --long"
 
 [tool.setuptools.packages.find]
 where = ["src/py"]
+
+[tool.setuptools.package-data]
+"*" = [
+    "*.yml",
+    "data/**/*",
+]
 
 [tool.black]
 line-length = 120
@@ -75,3 +83,8 @@ target-version = "py38"
 profile = "black"
 multi_line_output = 3
 include_trailing_comma = true
+
+# Per https://github.com/python/mypy/issues/10632
+[[tool.mypy.overrides]]
+module = "yaml"
+ignore_missing_imports = true
