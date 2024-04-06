@@ -23,7 +23,7 @@ PATH_IN_MANIFEST = "applications/espresso/v5.4.0/stdin"
 
 content = get_content_by_reference_path(PATH_IN_MANIFEST)
 print(content)
-``` 
+```
 
 ### 2.2. JavaScript/TypeScript
 
