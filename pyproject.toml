@@ -54,7 +54,14 @@ where = ["src/py"]
 [tool.setuptools.package-data]
 "*" = [
     "*.yml",
-    "data/**/*",
+    "data/**"
+]
+
+[tool.setuptools.exclude-package-data]
+"*" = [
+    # Since data inside `src/py` is a link, exclusion is needed
+    # to avoid `doesn't exist or not a regular file` error
+    "data"
 ]
 
 [tool.black]
