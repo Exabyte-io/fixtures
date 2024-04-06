@@ -15,8 +15,8 @@ classifiers = [
     "Topic :: Software Development",
 ]
 dependencies = [
-    # add requirements here
     "pyyaml",
+    "mat3ra-utils",
 ]
 
 [project.optional-dependencies]
