@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const register = require("@babel/register").default;
-
-register({ extensions: [".ts", ".tsx", ".js", ".jsx"] });
+require("@babel/register")({
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
+});
