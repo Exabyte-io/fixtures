@@ -27,7 +27,82 @@ print(content)
 
 ### 2.2. JavaScript/TypeScript
 
-To be added. Only servier-side (Node.js) runtime to be supported due to having to rely on the filesystem.
+This package can be installed via npm:
+
+```bash
+npm install @mat3ra/fixtures
+```
+
+The package exports utilities to access the data folder. Only server-side (Node.js) runtime is supported due to having to rely on the filesystem.
+
+#### Getting the Data Folder Path
+
+You can access the data folder path in several ways:
+
+**TypeScript/ES6 Modules:**
+
+```typescript
+import { getDataPath, DATA_PATH } from '@mat3ra/fixtures';
+import * as fs from 'fs';
+import * as path from 'path';
+
+// Using the function
+const dataPath = getDataPath();
+
+// Using the constant
+const manifestPath = path.join(DATA_PATH, 'applications/espresso/5.4.0/manifest.yml');
+const manifest = fs.readFileSync(manifestPath, 'utf-8');
+
+// Using default export
+import dataPath from '@mat3ra/fixtures';
+const filePath = path.join(dataPath, 'applications/espresso/5.4.0/case-001/pw-scf.in');
+```
+
+**CommonJS:**
+
+```javascript
+const { getDataPath, DATA_PATH } = require('@mat3ra/fixtures');
+const fs = require('fs');
+const path = require('path');
+
+// Using the function
+const dataPath = getDataPath();
+
+// Using the constant
+const manifestPath = path.join(DATA_PATH, 'applications/espresso/5.4.0/manifest.yml');
+const manifest = fs.readFileSync(manifestPath, 'utf-8');
+```
+
+#### Direct Data Folder Access
+
+You can also access the data folder directly using the package exports:
+
+```typescript
+// Access specific files in the data folder
+import '@mat3ra/fixtures/data/applications/espresso/5.4.0/manifest.yml';
+```
+
+#### Example: Reading a File from the Data Folder
+
+```typescript
+import { DATA_PATH } from '@mat3ra/fixtures';
+import * as fs from 'fs';
+import * as path from 'path';
+
+// Read a manifest file
+const manifestPath = path.join(
+  DATA_PATH,
+  'applications/espresso/5.4.0/manifest.yml'
+);
+const manifest = fs.readFileSync(manifestPath, 'utf-8');
+
+// Read an input file
+const inputPath = path.join(
+  DATA_PATH,
+  'applications/espresso/5.4.0/case-001/pw-scf.in'
+);
+const inputContent = fs.readFileSync(inputPath, 'utf-8');
+```
 
 ## 3. Development
 
