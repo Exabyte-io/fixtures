@@ -1,15 +1,25 @@
 {
     "name": "@mat3ra/fixtures",
     "version": "0.0.0",
-    "description": "Fixtures Py/JS",
+    "description": "Fixtures for common applications, formats, and databases. Exports data folder for programmatic access.",
     "author": "Exabyte Inc.",
     "license": "ISC",
-    "main": "dist/index.js",
+    "main": "dist/js/index.js",
+    "types": "dist/js/index.d.ts",
     "files": [
-        "/dist",
-        "/src/js",
+        "dist",
+        "data",
+        "src/js",
         "tsconfig.json"
     ],
+    "exports": {
+        ".": {
+            "types": "./dist/js/index.d.ts",
+            "default": "./dist/js/index.js"
+        },
+        "./data": "./data",
+        "./data/*": "./data/*"
+    },
     "dependencies": {
         "ts-node": "^10.9.1",
         "typescript": "^5.0.2"
