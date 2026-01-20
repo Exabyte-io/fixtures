@@ -5,7 +5,7 @@
         "IBRAV": 0,
         "NAT": 4,
         "NTYP": 2,
-        "NTYP_WITH_LABELS": 2,
+        "NTYP_WITH_LABELS": 3,
         "ATOMIC_SPECIES": [
             {
                 "X": "Fe",
@@ -20,7 +20,12 @@
         ],
         "ATOMIC_SPECIES_WITH_LABELS": [
             {
-                "X": "Fe",
+                "X": "Fe1",
+                "Mass_X": 55.845,
+                "PseudoPot_X": "Fe.pbe-spn-rrkjus_psl.1.0.0.UPF"
+            },
+            {
+                "X": "Fe2",
                 "Mass_X": 55.845,
                 "PseudoPot_X": "Fe.pbe-spn-rrkjus_psl.1.0.0.UPF"
             },
