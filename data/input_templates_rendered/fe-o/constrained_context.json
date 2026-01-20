@@ -5,7 +5,7 @@
         "IBRAV": 0,
         "NAT": 4,
         "NTYP": 2,
-        "NTYP_WITH_LABELS": 2,
+        "NTYP_WITH_LABELS": 3,
         "ATOMIC_SPECIES": [
             {
                 "X": "Fe",
