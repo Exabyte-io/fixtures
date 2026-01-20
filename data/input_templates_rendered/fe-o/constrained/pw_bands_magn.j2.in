@@ -14,7 +14,7 @@
 &SYSTEM
     ibrav = 0
     nat = 4
-    ntyp = 2
+    ntyp = 3
     nspin = 2
     ecutwfc = 50
     ecutrho = 200
@@ -34,7 +34,8 @@
 &CELL
 /
 ATOMIC_SPECIES
-Fe 55.845 Fe.pbe-spn-rrkjus_psl.1.0.0.UPF
+Fe1 55.845 Fe.pbe-spn-rrkjus_psl.1.0.0.UPF
+Fe2 55.845 Fe.pbe-spn-rrkjus_psl.1.0.0.UPF
 O 15.999 O.pbe-n-rrkjus_psl.1.0.0.UPF
 
 ATOMIC_POSITIONS crystal
