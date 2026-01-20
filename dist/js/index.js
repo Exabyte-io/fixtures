@@ -41,7 +41,13 @@ var __importStar =
         return result;
     };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DATA_PATH = exports.getDataPath = void 0;
+exports.getTemplateContexts =
+    exports.getRenderedTemplateFile =
+    exports.readFileFromFixtures =
+    exports.DATA_PATH =
+    exports.getDataPath =
+        void 0;
+const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 /**
  * Get the path to the data folder
@@ -55,6 +61,46 @@ exports.getDataPath = getDataPath;
  * The path to the data folder
  */
 exports.DATA_PATH = path.join(__dirname, "../../data");
+/**
+ * Read a file from the fixtures data folder
+ * @param filePath - Relative path from the data folder
+ * @returns The file content as a string
+ */
+function readFileFromFixtures(filePath) {
+    return fs.readFileSync(path.join(exports.DATA_PATH, filePath), "utf-8");
+}
+exports.readFileFromFixtures = readFileFromFixtures;
+/**
+ * Get a rendered template file from the fe-o templates
+ * @param contextName - The context name: "default" or "constrained"
+ * @param name - The template name (without .j2.in extension)
+ * @returns Object with the file name and normalized content
+ */
+function getRenderedTemplateFile(contextName, name) {
+    const fullName = `${name}.j2.in`;
+    const filePath = `input_templates_rendered/fe-o/${contextName}/${fullName}`;
+    return {
+        name: fullName,
+        // Normalize line endings for cross-platform compatibility
+        content: readFileFromFixtures(filePath).replace(/\r\n/g, "\n"),
+    };
+}
+exports.getRenderedTemplateFile = getRenderedTemplateFile;
+/**
+ * Get template contexts for fe-o templates
+ * @returns Array of context objects with name and parsed JSON content
+ */
+function getTemplateContexts() {
+    const names = ["default", "constrained"];
+    return names.map((name) => {
+        const content = readFileFromFixtures(`input_templates_rendered/fe-o/${name}_context.json`);
+        return {
+            name,
+            context: JSON.parse(content),
+        };
+    });
+}
+exports.getTemplateContexts = getTemplateContexts;
 /**
  * Export the data folder path as the default export
  */

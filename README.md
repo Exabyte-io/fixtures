@@ -82,6 +82,30 @@ You can also access the data folder directly using the package exports:
 import '@mat3ra/fixtures/data/applications/espresso/5.4.0/manifest.yml';
 ```
 
+#### Utility Functions
+
+The package provides utility functions for common operations:
+
+```typescript
+import {
+  readFileFromFixtures,
+  getRenderedTemplateFile,
+  getTemplateContexts,
+} from '@mat3ra/fixtures';
+
+// Read any file from the data folder
+const manifest = readFileFromFixtures('applications/espresso/5.4.0/manifest.yml');
+
+// Get a rendered template file (with normalized line endings)
+const template = getRenderedTemplateFile('default', 'pw_scf');
+console.log(template.name); // 'pw_scf.j2.in'
+console.log(template.content); // Template content
+
+// Get all template contexts
+const contexts = getTemplateContexts();
+// Returns: [{ name: 'default', context: {...} }, { name: 'constrained', context: {...} }]
+```
+
 #### Example: Reading a File from the Data Folder
 
 ```typescript
