@@ -20,6 +20,9 @@
     occupations = 'smearing'
     degauss = 0.005
     input_dft = 'hse',
+    nqx1 = 4
+    nqx2 = 4
+    nqx3 = 4
 
 /
 &ELECTRONS

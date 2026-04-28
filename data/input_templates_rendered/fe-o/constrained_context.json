@@ -212,6 +212,18 @@
             0
         ]
     },
+    "qgrid": {
+        "dimensions": [
+            4,
+            4,
+            4
+        ],
+        "shifts": [
+            0,
+            0,
+            0
+        ]
+    },
     "kpath": [
         {
             "coordinates": [
@@ -228,6 +240,22 @@
                 0.5
             ],
             "steps": 20
+        }
+    ],
+    "explicitKPath2PIBA": [
+        {
+            "coordinates": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "coordinates": [
+                0.5,
+                0.5,
+                0.5
+            ]
         }
     ],
     "collinearMagnetization": {

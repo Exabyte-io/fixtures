@@ -1,0 +1,9 @@
+&INPUT
+    asr = 'simple'
+    flfrc ='force_constants.fc'
+    flfrq ='frequencies.freq'
+    flvec ='normal_modes.out'
+    q_in_band_form = .true.
+ /
+
+
