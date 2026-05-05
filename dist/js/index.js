@@ -1,52 +1,52 @@
 "use strict";
 var __createBinding =
-    (this && this.__createBinding) ||
-    (Object.create
-        ? function (o, m, k, k2) {
-              if (k2 === undefined) k2 = k;
-              var desc = Object.getOwnPropertyDescriptor(m, k);
-              if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-                  desc = {
-                      enumerable: true,
-                      get: function () {
-                          return m[k];
-                      },
-                  };
-              }
-              Object.defineProperty(o, k2, desc);
-          }
-        : function (o, m, k, k2) {
-              if (k2 === undefined) k2 = k;
-              o[k2] = m[k];
-          });
+  (this && this.__createBinding) ||
+  (Object.create
+    ? function (o, m, k, k2) {
+        if (k2 === undefined) k2 = k;
+        var desc = Object.getOwnPropertyDescriptor(m, k);
+        if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+          desc = {
+            enumerable: true,
+            get: function () {
+              return m[k];
+            },
+          };
+        }
+        Object.defineProperty(o, k2, desc);
+      }
+    : function (o, m, k, k2) {
+        if (k2 === undefined) k2 = k;
+        o[k2] = m[k];
+      });
 var __setModuleDefault =
-    (this && this.__setModuleDefault) ||
-    (Object.create
-        ? function (o, v) {
-              Object.defineProperty(o, "default", { enumerable: true, value: v });
-          }
-        : function (o, v) {
-              o["default"] = v;
-          });
+  (this && this.__setModuleDefault) ||
+  (Object.create
+    ? function (o, v) {
+        Object.defineProperty(o, "default", { enumerable: true, value: v });
+      }
+    : function (o, v) {
+        o["default"] = v;
+      });
 var __importStar =
-    (this && this.__importStar) ||
-    function (mod) {
-        if (mod && mod.__esModule) return mod;
-        var result = {};
-        if (mod != null)
-            for (var k in mod)
-                if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-                    __createBinding(result, mod, k);
-        __setModuleDefault(result, mod);
-        return result;
-    };
+  (this && this.__importStar) ||
+  function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null)
+      for (var k in mod)
+        if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+          __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+  };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getTemplateContexts =
-    exports.getRenderedTemplateFile =
-    exports.readFileFromFixtures =
-    exports.DATA_PATH =
-    exports.getDataPath =
-        void 0;
+  exports.getRenderedTemplateFile =
+  exports.readFileFromFixtures =
+  exports.DATA_PATH =
+  exports.getDataPath =
+    void 0;
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 /**
@@ -54,7 +54,7 @@ const path = __importStar(require("path"));
  * @returns The absolute path to the data folder
  */
 function getDataPath() {
-    return path.join(__dirname, "../../data");
+  return path.join(__dirname, "../../data");
 }
 exports.getDataPath = getDataPath;
 /**
@@ -67,7 +67,7 @@ exports.DATA_PATH = path.join(__dirname, "../../data");
  * @returns The file content as a string
  */
 function readFileFromFixtures(filePath) {
-    return fs.readFileSync(path.join(exports.DATA_PATH, filePath), "utf-8");
+  return fs.readFileSync(path.join(exports.DATA_PATH, filePath), "utf-8");
 }
 exports.readFileFromFixtures = readFileFromFixtures;
 /**
@@ -77,13 +77,13 @@ exports.readFileFromFixtures = readFileFromFixtures;
  * @returns Object with the file name and normalized content
  */
 function getRenderedTemplateFile(contextName, name) {
-    const fullName = `${name}.j2.in`;
-    const filePath = `input_templates_rendered/fe-o/${contextName}/${fullName}`;
-    return {
-        name: fullName,
-        // Normalize line endings for cross-platform compatibility
-        content: readFileFromFixtures(filePath).replace(/\r\n/g, "\n"),
-    };
+  const fullName = `${name}.j2.in`;
+  const filePath = `input_templates_rendered/fe-o/${contextName}/${fullName}`;
+  return {
+    name: fullName,
+    // Normalize line endings for cross-platform compatibility
+    content: readFileFromFixtures(filePath).replace(/\r\n/g, "\n"),
+  };
 }
 exports.getRenderedTemplateFile = getRenderedTemplateFile;
 /**
@@ -91,14 +91,14 @@ exports.getRenderedTemplateFile = getRenderedTemplateFile;
  * @returns Array of context objects with name and parsed JSON content
  */
 function getTemplateContexts() {
-    const names = ["default", "constrained"];
-    return names.map((name) => {
-        const content = readFileFromFixtures(`input_templates_rendered/fe-o/${name}_context.json`);
-        return {
-            name,
-            context: JSON.parse(content),
-        };
-    });
+  const names = ["default", "constrained"];
+  return names.map((name) => {
+    const content = readFileFromFixtures(`input_templates_rendered/fe-o/${name}_context.json`);
+    return {
+      name,
+      context: JSON.parse(content),
+    };
+  });
 }
 exports.getTemplateContexts = getTemplateContexts;
 /**

@@ -242,6 +242,40 @@
             "steps": 20
         }
     ],
+    "ipath": [
+        {
+            "coordinates": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "steps": 11
+        },
+        {
+            "coordinates": [
+                0.625,
+                0.25,
+                0.625
+            ],
+            "steps": 12
+        },
+        {
+            "coordinates": [
+                0.5,
+                0.0,
+                0.5
+            ],
+            "steps": 13
+        },
+        {
+            "coordinates": [
+                0.5,
+                0.25,
+                0.75
+            ],
+            "steps": 14
+        }
+    ],
     "explicitKPath2PIBA": [
         {
             "coordinates": [
