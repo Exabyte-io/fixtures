@@ -55,7 +55,7 @@ jobs:
           path: actions
 
       - name: Run python unit tests
-        uses: ./actions/py/test
+        uses: ./actions/py/pytest
         with:
           python-version: ${{ matrix.python-version }}
           unit-test-directory: tests/py/unit
@@ -85,8 +85,8 @@ jobs:
       - name: Run JS validate
         uses: ./actions/js/validate
         with:
-          node-version: "20.x"
-          skip-eslint: "true"
+          node-version: 20.x
+          skip-eslint: true
 
       - name: Run JS tests
         uses: ./actions/js/test
@@ -145,4 +145,4 @@ jobs:
           python-version: 3.10.x
           github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
           pypi-api-token: ${{ secrets.PYPI_API_TOKEN }}
-          publish-tag: "false"
+          publish-tag: false
