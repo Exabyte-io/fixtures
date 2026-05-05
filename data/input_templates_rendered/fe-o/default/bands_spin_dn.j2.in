@@ -1,0 +1,7 @@
+&BANDS
+    prefix = '__prefix__'
+    outdir = '{{ JOB_WORK_DIR }}/outdir'
+    filband = '{{ JOB_WORK_DIR }}/bands_dn.dat'
+    spin_component = 2
+    no_overlap = .true.
+/

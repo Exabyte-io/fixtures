@@ -1,0 +1,18 @@
+&INPUTPH
+    tr2_ph = 1.0d-18
+    ldisp = .true.
+
+    start_q = {{MAP_DATA.qpoint}}
+    last_q = {{MAP_DATA.qpoint}}
+    start_irr = {{MAP_DATA.irr}}
+    last_irr= {{MAP_DATA.irr}}
+
+    recover = .true.
+    fildyn = 'dyn'
+    prefix = '__prefix__'
+    outdir = '{{ JOB_SCRATCH_DIR }}/outdir'
+    nq1 = 4
+    nq2 = 4
+    nq3 = 4
+
+/

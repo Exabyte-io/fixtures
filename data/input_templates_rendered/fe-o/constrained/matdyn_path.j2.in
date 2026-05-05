@@ -1,0 +1,13 @@
+&INPUT
+    asr = 'simple'
+    flfrc ='force_constants.fc'
+    flfrq ='frequencies.freq'
+    flvec ='normal_modes.out'
+    q_in_band_form = .true.
+ /
+4
+   0.500000000    0.500000000    0.500000000 11
+   0.625000000    0.250000000    0.625000000 12
+   0.500000000    0.000000000    0.500000000 13
+   0.500000000    0.250000000    0.750000000 14
+

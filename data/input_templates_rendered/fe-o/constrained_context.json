@@ -1,0 +1,342 @@
+{
+    "subworkflowContext": {},
+    "input": {
+        "RESTART_MODE": "from_scratch",
+        "IBRAV": 0,
+        "NAT": 4,
+        "NTYP": 2,
+        "NTYP_WITH_LABELS": 3,
+        "ATOMIC_SPECIES": [
+            {
+                "X": "Fe",
+                "Mass_X": 55.845,
+                "PseudoPot_X": "Fe.pbe-spn-rrkjus_psl.1.0.0.UPF"
+            },
+            {
+                "X": "O",
+                "Mass_X": 15.999,
+                "PseudoPot_X": "O.pbe-n-rrkjus_psl.1.0.0.UPF"
+            }
+        ],
+        "ATOMIC_SPECIES_WITH_LABELS": [
+            {
+                "X": "Fe1",
+                "Mass_X": 55.845,
+                "PseudoPot_X": "Fe.pbe-spn-rrkjus_psl.1.0.0.UPF"
+            },
+            {
+                "X": "Fe2",
+                "Mass_X": 55.845,
+                "PseudoPot_X": "Fe.pbe-spn-rrkjus_psl.1.0.0.UPF"
+            },
+            {
+                "X": "O",
+                "Mass_X": 15.999,
+                "PseudoPot_X": "O.pbe-n-rrkjus_psl.1.0.0.UPF"
+            }
+        ],
+        "ATOMIC_POSITIONS": [
+            {
+                "X": "Fe",
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "if_pos(1)": 0,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            },
+            {
+                "X": "Fe",
+                "x": 0.5,
+                "y": 0.5,
+                "z": 0.5,
+                "if_pos(1)": 1,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            },
+            {
+                "X": "O",
+                "x": 0.25,
+                "y": 0.25,
+                "z": 0.25,
+                "if_pos(1)": 1,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            },
+            {
+                "X": "O",
+                "x": 0.75,
+                "y": 0.75,
+                "z": 0.75,
+                "if_pos(1)": 1,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            }
+        ],
+        "CELL_PARAMETERS": {
+            "v1": [
+                5.0,
+                0.0,
+                0.0
+            ],
+            "v2": [
+                0.0,
+                5.0,
+                0.0
+            ],
+            "v3": [
+                0.0,
+                0.0,
+                5.0
+            ]
+        },
+        "INTERMEDIATE_IMAGES": [
+            [
+                {
+                    "X": "Fe",
+                    "x": 0.1,
+                    "y": 0.1,
+                    "z": 0.1,
+                    "if_pos(1)": 0,
+                    "if_pos(2)": 1,
+                    "if_pos(3)": 1
+                },
+                {
+                    "X": "Fe",
+                    "x": 0.3,
+                    "y": 0.3,
+                    "z": 0.3,
+                    "if_pos(1)": 1,
+                    "if_pos(2)": 1,
+                    "if_pos(3)": 1
+                }
+            ]
+        ],
+        "FIRST_IMAGE": [
+            {
+                "X": "Fe",
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "if_pos(1)": 0,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            },
+            {
+                "X": "Fe",
+                "x": 0.5,
+                "y": 0.5,
+                "z": 0.5,
+                "if_pos(1)": 1,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            },
+            {
+                "X": "O",
+                "x": 0.25,
+                "y": 0.25,
+                "z": 0.25,
+                "if_pos(1)": 1,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            },
+            {
+                "X": "O",
+                "x": 0.75,
+                "y": 0.75,
+                "z": 0.75,
+                "if_pos(1)": 1,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            }
+        ],
+        "LAST_IMAGE": [
+            {
+                "X": "Fe",
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "if_pos(1)": 0,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            },
+            {
+                "X": "Fe",
+                "x": 0.5,
+                "y": 0.5,
+                "z": 0.5,
+                "if_pos(1)": 1,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            },
+            {
+                "X": "O",
+                "x": 0.25,
+                "y": 0.25,
+                "z": 0.25,
+                "if_pos(1)": 1,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            },
+            {
+                "X": "O",
+                "x": 0.75,
+                "y": 0.75,
+                "z": 0.75,
+                "if_pos(1)": 1,
+                "if_pos(2)": 1,
+                "if_pos(3)": 1
+            }
+        ]
+    },
+    "dynamics": {
+        "numberOfSteps": 100,
+        "timeStep": 0.1,
+        "electronMass": 400.0,
+        "temperature": 300.0
+    },
+    "cutoffs": {
+        "wavefunction": 50.0,
+        "density": 200.0
+    },
+    "JOB_WORK_DIR": "/tmp/test_job",
+    "kgrid": {
+        "dimensions": [
+            4,
+            4,
+            4
+        ],
+        "shifts": [
+            0,
+            0,
+            0
+        ]
+    },
+    "qgrid": {
+        "dimensions": [
+            4,
+            4,
+            4
+        ],
+        "shifts": [
+            0,
+            0,
+            0
+        ]
+    },
+    "kpath": [
+        {
+            "coordinates": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "steps": 20
+        },
+        {
+            "coordinates": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "steps": 20
+        }
+    ],
+    "ipath": [
+        {
+            "coordinates": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "steps": 11
+        },
+        {
+            "coordinates": [
+                0.625,
+                0.25,
+                0.625
+            ],
+            "steps": 12
+        },
+        {
+            "coordinates": [
+                0.5,
+                0.0,
+                0.5
+            ],
+            "steps": 13
+        },
+        {
+            "coordinates": [
+                0.5,
+                0.25,
+                0.75
+            ],
+            "steps": 14
+        }
+    ],
+    "explicitKPath2PIBA": [
+        {
+            "coordinates": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "coordinates": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        }
+    ],
+    "collinearMagnetization": {
+        "isTotalMagnetization": false,
+        "startingMagnetization": [
+            {
+                "index": 1,
+                "value": 0.5
+            },
+            {
+                "index": 2,
+                "value": 0.0
+            }
+        ]
+    },
+    "nonCollinearMagnetization": {
+        "isStartingMagnetization": false,
+        "isConstrainedMagnetization": false,
+        "isFixedMagnetization": false,
+        "isExistingChargeDensity": false,
+        "isArbitrarySpinDirection": false
+    },
+    "hubbard_u": [
+        {
+            "atomicSpecies": "Fe",
+            "atomicOrbital": "3d",
+            "hubbardUValue": 4.0
+        }
+    ],
+    "hubbard_legacy": [
+        {
+            "atomicSpeciesIndex": 1,
+            "hubbardUValue": 4.0
+        }
+    ],
+    "hubbard_v": [
+        {
+            "atomicSpecies": "Fe",
+            "atomicOrbital": "3d",
+            "hubbardVValue": 2.0
+        }
+    ],
+    "hubbard_j": [
+        {
+            "atomicSpecies": "Fe",
+            "atomicOrbital": "3d",
+            "hubbardJValue": 1.0
+        }
+    ]
+}
