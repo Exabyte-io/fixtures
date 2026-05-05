@@ -20,19 +20,19 @@ export declare function readFileFromFixtures(filePath: string): string;
  * @returns Object with the file name and normalized content
  */
 export declare function getRenderedTemplateFile(
-  contextName: "default" | "constrained",
-  name: string,
+    contextName: "default" | "constrained",
+    name: string,
 ): {
-  name: string;
-  content: string;
+    name: string;
+    content: string;
 };
 /**
  * Get template contexts for fe-o templates
  * @returns Array of context objects with name and parsed JSON content
  */
 export declare function getTemplateContexts(): Array<{
-  name: "default" | "constrained";
-  context: object;
+    name: "default" | "constrained";
+    context: object;
 }>;
 /**
  * Export the data folder path as the default export
